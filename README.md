@@ -6,6 +6,8 @@
 
 ![WeatherChance](docs/logo.png)
 
+Live application URL: [WeatherChance](https://weatherchance-web.onrender.com/)
+
 # WeatherChance App
 
 WeatherChance is an open-source application that can predict whether the tomorrows weather of particular queried location/city will be good or bad. Good weather is essentially defined as sunny and less cloudly and bad weather is defined as rainy, snowy etc. It's called WeatherChance because it returns whether the weather will be bad or good in percentages.
