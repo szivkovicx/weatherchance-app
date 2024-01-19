@@ -17,12 +17,15 @@ export const InfoCircle:FC<TProps> = ({
             flexDirection: 'column',
         }}>
             <h1>
-                🏙 {data.meta.name}, {data.meta.country}
+                🏙 {data.meta.name}
             </h1>
             <div style={{
                 marginTop: -25,
                 marginLeft: 50
             }}>
+                <p>
+                    🗾 <b>{data.meta.country}</b>
+                </p>
                 <p>
                     🏘️ <b>{data.meta.region}</b>
                 </p>
@@ -44,7 +47,7 @@ export const InfoCircle:FC<TProps> = ({
                 {data.forecast.length == 1 ? (
                     <>
                         <h1>
-                            🌧 100%
+                            🌧 0%
                         </h1>
                         <h1>
                             ☀️ {data.forecast[0]}%

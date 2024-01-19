@@ -26,6 +26,9 @@ export default function Home() {
         gap: 30,
         borderRadius: 20,
         padding: 20,
+        borderStyle: 'solid',
+        borderColor: "rgba(0, 0, 255, .3)",
+        borderWidth: 5,
         boxShadow: '12px 12px 2px 1px rgba(0, 0, 255, .2)'
       }}>
           <div style={{

@@ -11,8 +11,10 @@ type TProps = {
 export const EnvironmentSlider: FC<TProps> = ({
     data
 }) => {
-    const percentageA = data.forecast[0];
-    const percentageB = 100 - percentageA;
+    const percentageA = data.forecast.length == 1 ? 0 : data.forecast[0];
+    const percentageB = data.forecast.length == 1 ? 100 : 100 - percentageA;
+
+    console.log(percentageA, percentageB)
 
     return (
         <div
@@ -24,10 +26,10 @@ export const EnvironmentSlider: FC<TProps> = ({
             }}
         >
             <div style={{
-                    background: `url(${data.forecast.length == 1 ? "https://www.clipstudio.net/wp-content/uploads/2020/06/0134_004.jpg" : "https://www.clipstudio.net/wp-content/uploads/2020/06/0134_019.jpg)"}`,
+                    background: "url(https://www.clipstudio.net/wp-content/uploads/2020/06/0134_019.jpg)",
                     backgroundRepeat: 'no-repeat',
-                    backgroundSize: '500px 250px',
-                    backgroundPosition: '-40px -20px',
+                    backgroundSize: 'auto',
+                    backgroundPosition: 'center',
                     borderRadius: 20,
                     borderTopRightRadius: percentageA == 100 ? 20 : 0,
                     borderBottomRightRadius: percentageA == 100 ? 20 : 0,
@@ -37,10 +39,10 @@ export const EnvironmentSlider: FC<TProps> = ({
             />
             <div
                 style={{
-                    background: `url(${data.forecast.length == 1 ? "https://www.clipstudio.net/wp-content/uploads/2020/06/0134_019.jpg" : "https://www.clipstudio.net/wp-content/uploads/2020/06/0134_004.jpg"})`,
+                    background: "url(https://www.clipstudio.net/wp-content/uploads/2020/06/0134_004.jpg)",
                     backgroundRepeat: 'no-repeat',
-                    backgroundSize: '500px 250px',
-                    backgroundPosition: '-40px -20px',
+                    backgroundSize: 'auto',
+                    backgroundPosition: 'center',
                     borderRadius: 20,
                     borderTopLeftRadius: percentageB == 100 ? 20 : 0,
                     borderBottomLeftRadius: percentageB == 100 ? 20 : 0,
