@@ -14,8 +14,6 @@ export const EnvironmentSlider: FC<TProps> = ({
     const percentageA = data.forecast.length == 1 ? 0 : data.forecast[0];
     const percentageB = data.forecast.length == 1 ? 100 : 100 - percentageA;
 
-    console.log(percentageA, percentageB)
-
     return (
         <div
             style={{
