@@ -38,6 +38,11 @@ export const LocationInput:FC<TProps> = ({
                     borderStyle: 'solid',
                     outline: 'none'
                 }}
+                onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                        fetchForecast();
+                    }            
+                }}
             />
             <button
                 type="button"
